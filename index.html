@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        .main {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+            background-color: rgb(10, 39, 29);
+        }
+
+        .l1 {
+            height: 100vh;
+            width: 50%;
+            top: 0%;
+            left: 0%;
+            /* position: relative; */
+        }
+
+        .img {
+            height: 100vh;
+            width: 200%;
+        }
+
+        .r1 {
+            height: 00px;
+            width: 300px;
+            position: absolute;
+            top: 10%;
+            right: 12%;
+        }
+
+        .frm {
+            height: 400px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 40px;
+            align-items: center;
+            /* padding: 10%; */
+            color: rgb(204, 203, 203);
+        }
+
+        input {
+            width: 80%;
+            height: 40px;
+            font-size: large;
+            margin: 15px;
+            text-align: center;
+            border-radius: 30px;
+            color: rgb(15, 193, 206);
+        }
+        .ifd {
+            border: none;
+            border-bottom: 2px solid black;
+            background: none;
+            font-weight: bolder;
+            text-align: center;
+            letter-spacing: 2px;
+            border-color: none;
+            cursor: pointer;
+        }
+        .ifd:focus{
+            outline: none;
+        }
+        .fm{
+            font-size: 25px;font-weight: bolder;
+            font-family:Goudy Stout;
+            /* padding-bottom: 20px; */
+            text-decoration: solid rgb(255, 255, 255);
+            text-shadow: 10px 10px 10px black;
+            letter-spacing: 2px;
+            /* background-image: url(B1\ \(2\).jpg); */
+            /* color: rgba(255, 255, 255, 0.048); */
+        }
+        .lsp {
+            letter-spacing: 2px;
+            font-weight: bolder;
+            font-size: larger;
+            /* margin-top: 20px; */
+            padding-top: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .lnk{
+            text-decoration: none;
+            color: aqua;
+            letter-spacing: 2px;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(196, 194, 194);
+            font-variant: small-caps;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: #a83535;
+        }
+        .btn{
+            color: azure;
+            background-color: rgb(34, 14, 23);
+            /* border: none; */
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="l1">
+            <img src="B1 (2).jpg" alt="" class="img">
+        </div>
+        <div class="r1">
+            <form action="" class="frm" autocomplete="off" onsubmit="chk()" >
+                <label for="" class="fm"><b>LOGIN </b></label><br><br><br>
+                <label for="" class="lsp"><span style="color: aqua;" >USER</span>NAME </label>
+                <input type="text" name="un" placeholder="username"  id="un"class="ifd"><br>
+                <label for="" class="lsp"><span style="color: aqua;" >PASS</span>WORD </label>
+                <input type="password" name="pass" id="pss" placeholder="password" class="ifd"><br>
+                <div class="lnk"><span><a href="#">Forget password ?</a></span></div>
+                <input type="submit" name="btn" value="LOGIN" class="btn">
+                <div class="lnk"><samp><a href="#">Create Account</a></samp></div>
+            </form>
+        </div>
+    </div>
+    <div>
+        <script type="text/javascript">
+            function chk()
+            {
+                let un1="rahul"
+                let pass1="password"
+                let un2=document.getElementById("un").value;
+                let pass2=document.getElementById("pss").value;
+                if((un1==un2)&&(pass1==pass2))
+                {
+                    // window.open("home-page.html")
+                    alert("login sucessfull")
+                }
+                else{
+                    alert("invalid username/password")
+                }
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>
